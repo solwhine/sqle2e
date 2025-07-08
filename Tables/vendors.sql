@@ -1,0 +1,6 @@
+CREATE TABLE dev.Vendors (
+vendorID INT IDENTITY(1,1) PRIMARY KEY,
+vendorName NVARCHAR(100) NOT NULL UNIQUE,
+countryCode CHAR(2) CHECK (countryCode IN ('US','UK','IN','CA')),
+createdAt DATETIME2 DEFAULT SYSDATETIME()
+);
