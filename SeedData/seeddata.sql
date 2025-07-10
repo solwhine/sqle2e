@@ -1,9 +1,6 @@
-USE AdventureWorks2022DB;
-GO
-
 SET IDENTITY_INSERT dev.vendors ON;
 
-INSERT INTO Dev.Vendors (vendorID, vendorName, countryCode, createdAt)
+INSERT INTO dev.Vendors (vendorID, vendorName, countryCode, createdAt)
 VALUES
 (1, 'LogiTech Supplies', 'US', SYSDATETIME()),
 (2, 'Zenith Tech Corp', 'IN', SYSDATETIME()),

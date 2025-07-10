@@ -1,7 +1,7 @@
 USE TSQLT_AdventureWorks2022DB
 GO
 
-CREATE OR ALTER PROCEDURE marginAnalysisTests.[test_calculateVendorMargins_should_insert_one_high_margin_record]
+CREATE OR ALTER PROCEDURE marginAnalysisTests.[test_calculateVendorMargins_should_filter_to_top_margin_record]
 AS
 BEGIN
 	EXEC tSQLt.FakeTable @TableName = N'StagedSales', @SchemaName=N'dev'
@@ -13,7 +13,8 @@ BEGIN
     VALUES (1001, 10, '2024-01-01');
 
     INSERT INTO dev.Products(productID, vendorID, costPrice, listPrice, productName)
-    VALUES (1001, 101, 100, 200, 'Test Product');
+    VALUES (1001, 101, 100, 200, 'Test Product'),
+	(1002, 102, 100, 130, 'Test Low Product');
 
     INSERT INTO dev.Vendors(vendorID, vendorName)
     VALUES (101, 'Test Vendor');

@@ -1,8 +1,0 @@
-CREATE TABLE dev.Sales(
-saleID INT IDENTITY(1,1) PRIMARY KEY,
-productID INT NOT NULL,
-quantity INT NOT NULL CHECK(quantity > 0),
-saleDate DATE NOT NULL DEFAULT CAST(GETDATE() AS DATE),
-CONSTRAINT fk_productid FOREIGN KEY (productID) REFERENCES 
-dev.Products(productID)
-);

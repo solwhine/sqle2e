@@ -1,4 +1,8 @@
-CREATE VIEW dev.vw_vendorMarginAnalytics
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE VIEW [dev].[vw_vendorMarginAnalytics]
 AS
 SELECT 
 	v.vendorID,
@@ -21,3 +25,4 @@ FROM
 GROUP BY 
 	v.vendorID,
 	v.vendorName
+GO
