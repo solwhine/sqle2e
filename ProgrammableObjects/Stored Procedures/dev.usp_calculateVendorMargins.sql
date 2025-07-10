@@ -1,16 +1,19 @@
-USE AdventureWorks2022DB;
+SET QUOTED_IDENTIFIER ON
 GO
-CREATE OR ALTER PROCEDURE dev.usp_calculateVendorMargins 
+SET ANSI_NULLS ON
+GO
+CREATE   PROCEDURE [dev].[usp_calculateVendorMargins] 
 	@minMargin DECIMAL(5,2),
-	@batchsize INT = 1000
+	@batchsize INT = 1000,
+	@insertedcount INT OUTPUT 
 AS
 BEGIN
 	SET NOCOUNT ON;
+	DECLARE @rowStart INT = 1;
+	DECLARE @maxRows INT;
+	SET @insertedcount = 0;
 
 	BEGIN TRY
-		DECLARE @rowStart INT = 1;
-		DECLARE @maxRows INT;
-
 		--using rownumber for batching
 		WITH stagedWithRowNum AS(
 			SELECT *, ROW_NUMBER() OVER (ORDER BY saleID) AS RowNum
@@ -18,6 +21,14 @@ BEGIN
 			)
 
 		SELECT @maxRows = COUNT(1) FROM stagedWithRowNum;
+
+		---bringing in the top margin products via the inline tvf into a temp table
+			IF OBJECT_ID('tempdb..#topmarginproducts') IS NOT NULL
+				DROP TABLE #topMarginProducts;
+
+			SELECT productID INTO #topmarginproducts
+			FROM dev.fn_getTopMarginProducts(20);
+						
 
 		WHILE @rowStart <= @maxRows
 		BEGIN
@@ -42,9 +53,11 @@ BEGIN
 				ON b.productID=p.productID
 			INNER JOIN dev.Vendors v WITH (ROWLOCK)
 				ON p.vendorID = v.vendorID
+			INNER JOIN #topmarginProducts t ON p.productID=t.productID
 			WHERE 
 				dev.fn_getMarginPercent(p.listPrice,p.costPrice) >= @minMargin
-
+			
+			SET @insertedcount = @insertedcount + @@ROWCOUNT
 			SET @rowStart = @rowStart + @batchsize
 
 		END
@@ -55,3 +68,4 @@ BEGIN
 		RAISERROR('Error is :%s', 16, 1, @errmsg)
 	END CATCH
 END
+GO

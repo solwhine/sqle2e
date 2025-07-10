@@ -1,4 +1,8 @@
-CREATE FUNCTION dev.fn_getMarginPercent(@listPrice DECIMAL(10,2),@costPrice DECIMAL(10,2))
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE FUNCTION [dev].[fn_getMarginPercent](@listPrice DECIMAL(10,2),@costPrice DECIMAL(10,2))
 RETURNS DECIMAL(5,2)
 AS
 BEGIN
@@ -12,3 +16,4 @@ BEGIN
 
 	RETURN @marginpercent;
 END
+GO
