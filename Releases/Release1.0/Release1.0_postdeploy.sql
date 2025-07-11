@@ -1,0 +1,19 @@
+-- Release1.0_PostDeploy.sql
+-- Post-deployment logic
+
+-- Create deployment log table if it doesn't exist
+IF OBJECT_ID('dev.DeploymentLog', 'U') IS NULL
+BEGIN
+    CREATE TABLE dev.DeploymentLog (
+        releaseVersion NVARCHAR(10),
+        deployedBy     SYSNAME,
+        deployedOn     DATETIME
+    );
+END
+
+-- Insert log row
+INSERT INTO dev.DeploymentLog (releaseVersion, deployedBy, deployedOn)
+VALUES ('1.0', SYSTEM_USER, SYSDATETIME());
+
+--execute seed data script
+:r D:\sqle2e\SeedData\seed_initialdata.sql
