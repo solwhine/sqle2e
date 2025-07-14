@@ -1,0 +1,9 @@
+CREATE PARTITION FUNCTION pf_MarginAuditLog_Range (DATE)
+AS RANGE LEFT FOR VALUES 
+(
+    '2024-12-31', 
+    '2025-03-31', 
+    '2025-06-30', 
+    '2025-09-30'
+);
+

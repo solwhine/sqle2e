@@ -38,12 +38,6 @@ ADD CONSTRAINT PK_MarginAuditLog
 PRIMARY KEY CLUSTERED (saleDate, auditID); 
 
 
-CREATE NONCLUSTERED INDEX IX_MarginAuditLog_MarginPercent 
-ON dev.marginAuditLog (marginPercent DESC)
-INCLUDE (auditID, vendorName, productName, quantity, saleDate)
-GO
-
-
 INSERT INTO dev.MarginAuditLog (
 	vendorID, vendorName, productID, productName, quantity,
 	costPrice, listPrice, marginPercent, saleDate, loggedAt
@@ -81,9 +75,6 @@ CREATE TABLE dev.StagedSales
 )
 ON ps_StagedSales_DateRange(saleDate);
 
-CREATE NONCLUSTERED INDEX IX_StagedSales_saleID_productID
-ON dev.StagedSales (saleID, productID, saleDate)  
-INCLUDE (quantity);
 
 INSERT INTO dev.StagedSales (saleID, productID, quantity, saleDate)
 SELECT saleID, productID, quantity, saleDate

@@ -1,0 +1,8 @@
+CREATE PARTITION FUNCTION pf_StagedSales_DateRange (DATE)
+AS RANGE LEFT FOR VALUES
+(
+    '2024-06-30', 
+    '2024-12-31', 
+    '2025-06-30', 
+    '2025-12-31'
+);
