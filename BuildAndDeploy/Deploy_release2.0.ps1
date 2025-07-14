@@ -5,9 +5,9 @@ $serverName = "localhost"
 $databaseName = "PreProd"
 
 # 2. Script Paths
-$preDeployScript   = "..\Releases\Release2.0\Release2.0_PreDeploy.sql"
-$mainDeployScript  = "..\Releases\Release2.0\Release2.0_Deploy.sq"
-$postDeployScript  = "..\Releases\Release2.0\Release2.0_PostDeploy.sql"
+$preDeployScript   = "..\Releases\Release 2.0\Release2.0_PreDeploy.sql"
+$mainDeployScript  = "..\Releases\Release 2.0\Release2.0_Deploy.sql"
+$postDeployScript  = "..\Releases\Release 2.0\Release2.0_PostDeploy.sql"
 
 # 3. Execute Scripts in Order
 Write-Host "🔧 Running Pre-deployment script..."
