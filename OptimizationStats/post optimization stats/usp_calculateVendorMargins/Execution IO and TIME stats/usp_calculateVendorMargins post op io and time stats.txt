@@ -1,0 +1,108 @@
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 16 ms, elapsed time = 23 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Table 'Products'. Scan count 1, logical reads 2, physical reads 1, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 233 ms.
+Table 'StagedSales'. Scan count 3, logical reads 15, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 650 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 31 ms, elapsed time = 46 ms.
+Table 'MarginAuditLog'. Scan count 0, logical reads 4060, physical reads 236, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Workfile'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'StagedSales'. Scan count 3, logical reads 15, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table '#topmarginproducts__________________________________________________________________________________________________000000002D8B'. Scan count 1, logical reads 1, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Vendors'. Scan count 0, logical reads 16, physical reads 1, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Products'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+ SQL Server Execution Times:
+   CPU time = 47 ms,  elapsed time = 324 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Table 'MarginAuditLog'. Scan count 0, logical reads 4070, physical reads 19, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Workfile'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'StagedSales'. Scan count 3, logical reads 15, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table '#topmarginproducts__________________________________________________________________________________________________000000002D8B'. Scan count 1, logical reads 1, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Vendors'. Scan count 0, logical reads 16, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Products'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+ SQL Server Execution Times:
+   CPU time = 47 ms,  elapsed time = 168 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Table 'MarginAuditLog'. Scan count 0, logical reads 1168, physical reads 2, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Workfile'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'StagedSales'. Scan count 3, logical reads 15, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table '#topmarginproducts__________________________________________________________________________________________________000000002D8B'. Scan count 1, logical reads 1, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Vendors'. Scan count 0, logical reads 16, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Products'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+ SQL Server Execution Times:
+   CPU time = 15 ms,  elapsed time = 161 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 156 ms,  elapsed time = 1612 ms.
+
+(1 row affected)
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+Completion time: 2025-07-13T00:38:38.8676020+05:30

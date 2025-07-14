@@ -3,24 +3,13 @@ GO
 SET ANSI_NULLS ON
 GO
 
-CREATE   FUNCTION [dev].[fn_getMarginAuditDetails]
+CREATE FUNCTION [dev].[fn_getMarginAuditDetails]
 (
 	@minMarginPercent DECIMAL(5,2) = 0
 )
-RETURNS @details TABLE 
-(
-	auditID INT,
-	vendorName NVARCHAR(100),
-    productName NVARCHAR(100),
-    quantity INT,
-    marginPercent DECIMAL(5,2),
-    marginCategory NVARCHAR(20),
-    profitBand NVARCHAR(20),
-    saleDate DATE
-)
+RETURNS TABLE
 AS
-BEGIN
-	INSERT INTO @details
+RETURN (
 		SELECT 
 			auditID,
 			vendorName,
@@ -41,8 +30,6 @@ BEGIN
 			END AS profitBand,
 			saleDate
 			FROM dev.MarginAuditLog
-			WHERE marginPercent >= @minMarginPercent;
-
-	RETURN;
-END
+			WHERE marginPercent >= @minMarginPercent
+)
 GO

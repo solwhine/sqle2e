@@ -2,18 +2,14 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE FUNCTION [dev].[fn_getMarginPercent](@listPrice DECIMAL(10,2),@costPrice DECIMAL(10,2))
-RETURNS DECIMAL(5,2)
+CREATE FUNCTION [dev].[fn_getMarginPercent]
+(
+@listPrice DECIMAL(10,2),
+@costPrice DECIMAL(10,2)
+)
+RETURNS TABLE
 AS
-BEGIN
-	DECLARE @marginpercent DECIMAL(5,2);
+RETURN
+SELECT CAST(((@listPrice - @costPrice) / NULLIF(@listPrice, 0)) * 100 AS DECIMAL(5,2)) AS marginPercent;
 
-	IF(@listPrice=0)
-		SET @marginpercent = 0.00;
 
-	ELSE
-		SET @MarginPercent = ((@ListPrice - @CostPrice) / @ListPrice) * 100;
-
-	RETURN @marginpercent;
-END
-GO

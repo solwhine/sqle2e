@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE   PROCEDURE [dev].[usp_stageSalesBatch]
+CREATE PROCEDURE [dev].[usp_stageSalesBatch]
 	@startDate DATE,
 	@endDate DATE,
 	@rowsStaged INT OUTPUT
